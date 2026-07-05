@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Numan's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #1a0000, #cc0000);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 48px 20px 64px;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(16px);
+      border-radius: 20px;
+      padding: 48px;
+      width: 100%;
+      max-width: 860px;
+      color: #fff;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .top-left { flex: 1; }
+
+    .top-left h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .top-left .role {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .top-left .desc {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      max-width: 460px;
+    }
+
+    .avatar {
+      flex-shrink: 0;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.15);
+      object-fit: cover;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(255,255,255,0.12);
+      margin-bottom: 36px;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 24px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+      margin-bottom: 48px;
+    }
+
+    .video-grid video {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 10px;
+      display: block;
+      background: #000;
+      object-fit: cover;
+    }
+
+	.contact-item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		color: rgba(255,255,255,0.75);
+		text-decoration: none;
+		font-size: 0.95rem;
+		transition: color 0.2s ease;
+	}
+
+	.contact-icon {
+		width: 22px;
+		height: 22px;
+		object-fit: contain;
+		flex-shrink: 0;
+	}
+	
+	.contact-item:first-child {
+		margin-bottom: 12px;
+	}
+
+    .contact-item:hover { color: #fff; }
+
+    .contact-item svg {
+      flex-shrink: 0;
+      opacity: 0.75;
+    }
+
+    @media (max-width: 540px) {
+      .card { padding: 28px 20px; }
+      .top { flex-direction: column-reverse; align-items: center; text-align: center; }
+      .top-left .desc { max-width: 100%; }
+      .top-left h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+
+  <!-- TOP -->
+  <div class="top">
+    <div class="top-left">
+      <h1>Numan</h1>
+      <div class="role">Roblox Fullstack Scripter</div>
+      <p class="desc">16 years old with 5 years of experience building full-stack Roblox games. I have experience with server systems, UI, datastores, frameworks, and everything in between. I've dealt with many bad codebases and gave them a fresh start with clean and organized code after rewriting EVERYTHING to ensure that the game runs smooth, well optimized and has clean comments</p>
+    </div>
+    <img class="avatar" src="image.png" alt="Numan"/>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PROOF OF WORK -->
+  <div class="section-title">Proof of Work</div>
+  <div class="video-grid" id="vgrid"></div>
+
+  <div class="divider"></div>
+
+  <!-- CONTACT -->
+  <div class="section-title">Contact</div>
+  <div class="contact-items">
+
+	<a class="contact-item" href="https://www.roblox.com/users/275764279/profile" target="_blank">
+		<img src="roblox.png" alt="Roblox" class="contact-icon">
+		Roblox Profile
+	</a>
+
+	<a class="contact-item" href="https://discord.com/users/1388973586034724885" target="_blank">
+	  <!-- Discord icon -->
+	  <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+		<path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+	  </svg>
+	  @numantf6
+	</a>
+
+  </div>
+
+</div>
+
+<script>
+  // Videos
+  const files = [
+    'Screen Recording 2025-12-06 022712.mp4',
+    'Screen Recording 2026-02-01 200116.mp4',
+    'Screen Recording 2026-02-27 074100.mp4',
+    'Screen Recording 2026-02-28 183203.mp4',
+    'Screen Recording 2026-03-22 095708.mp4',
+    'Screen Recording 2026-03-28 055107.mp4',
+    'Screen Recording 2026-04-21 042523.mp4',
+    'Screen Recording 2026-04-25 042116.mp4',
+    'Screen Recording 2026-05-14 171643.mp4',
+    'Screen Recording 2026-05-04 141556.mp4',
+    'Screen Recording 2026-06-20 100652.mp4',
+    'Screen Recording 2026-06-28 040141.mp4',
+  ];
+
+  const grid = document.getElementById('vgrid');
+  files.forEach(f => {
+    const v = document.createElement('video');
+    v.src = f;
+    v.controls = true;
+    v.muted = true;
+    v.setAttribute('playsinline', '');
+    v.setAttribute('preload', 'metadata');
+    grid.appendChild(v);
+  });
+</script>
+</body>
+</html>
