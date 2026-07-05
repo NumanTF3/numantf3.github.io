@@ -4,8 +4,11 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Numan's Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -28,69 +31,67 @@
       color: #fff;
     }
 
-    .top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 32px;
-      margin-bottom: 40px;
-    }
+	.top {
+	  margin-bottom: 24px;
+	}
 
-    .top-left { flex: 1; }
+	.header {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  gap: 22px;
+	  margin-bottom: 28px;
+	}
 
-    .top-left h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
+	.title {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	}
 
-    .top-left .role {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.5);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-    }
+	.title h1 {
+	  font-size: 2.6rem;
+	  font-weight: 700;
+	  line-height: 1;
+	  margin-bottom: 8px;
+	}
 
-    .top-left .desc {
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.65);
-      line-height: 1.7;
-      max-width: 460px;
-    }
+	.role {
+	  font-size: 0.85rem;
+	  color: rgba(255,255,255,0.5);
+	  text-transform: uppercase;
+	  letter-spacing: 0.1em;
+	}
 
-    .avatar {
-      flex-shrink: 0;
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      border: 2px solid rgba(255,255,255,0.15);
-      object-fit: cover;
-      background: rgba(255,255,255,0.05);
-    }
+	.desc {
+	  width: 100%;
+	  font-size: 0.95rem;
+	  color: rgba(255,255,255,0.65);
+	  line-height: 1.8;
+	}
 
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: rgba(255,255,255,0.12);
-      margin-bottom: 36px;
-    }
-
+	.avatar {
+	  width: 110px;
+	  height: 110px;
+	  border-radius: 50%;
+	  border: 2px solid rgba(255,255,255,0.15);
+	  object-fit: cover;
+	  background: rgba(255,255,255,0.05);
+	}
     .section-title {
       font-size: 1rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: rgba(255,255,255,0.5);
-      margin-bottom: 24px;
+      margin-bottom: 12px;
     }
 
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 14px;
-      margin-bottom: 48px;
+      margin-bottom: 24px;
     }
 
     .video-grid video {
@@ -131,12 +132,25 @@
       opacity: 0.75;
     }
 
-    @media (max-width: 540px) {
-      .card { padding: 28px 20px; }
-      .top { flex-direction: column-reverse; align-items: center; text-align: center; }
-      .top-left .desc { max-width: 100%; }
-      .top-left h1 { font-size: 2rem; }
-    }
+	@media (max-width: 540px) {
+	  .card {
+		padding: 28px 20px;
+	  }
+
+	  .header {
+		flex-direction: column;
+		text-align: center;
+		gap: 16px;
+	  }
+
+	  .title h1 {
+		font-size: 2rem;
+	  }
+
+	  .desc {
+		text-align: left;
+	  }
+	}
   </style>
 </head>
 <body>
@@ -144,21 +158,22 @@
 
   <!-- TOP -->
   <div class="top">
-    <div class="top-left">
-      <h1>Numan</h1>
-      <div class="role">Roblox Fullstack Scripter</div>
-      <p class="desc">I am 16 years old with 5 years of experience building full-stack Roblox games. I have experience with server systems, UI, datastores, frameworks, and everything in between. I've dealt with many bad codebases and gave them a fresh start with clean and organized code after rewriting EVERYTHING to ensure that the game runs smooth, well optimized and has clean comments</p>
-    </div>
-    <img class="avatar" src="image.png" alt="Numan"/>
-  </div>
+    <div class="header">
+      <img class="avatar" src="image.png" alt="Numan"/>
+	
+      <div class="title">
+        <h1>Numan</h1>
+        <div class="role">Roblox Fullstack Scripter</div>
+      </div>
+	</div>
 
-  <div class="divider"></div>
+	<p class="desc">I am 16 years old with 5 years of experience building full-stack Roblox games. I have experience with server systems, UI, datastores, frameworks, and everything in between. I've dealt with many bad codebases and gave them a fresh start with clean and organized code after rewriting EVERYTHING to ensure that the game runs smooth, well optimized and has clean comments. I tend to follow extremely clear coding practices which may help junior scripters to learn from my code, and senior devs to easily make changes and develop off of further. I also made myself a plugin which lets me make a fresh codebase using my modular system which also contains an excellent character replication handler to ensure the game is smooth and fair for everyone on different pings</p>
+  
+  </div>
 
   <!-- PROOF OF WORK -->
   <div class="section-title">Proof of Work</div>
   <div class="video-grid" id="vgrid"></div>
-
-  <div class="divider"></div>
 
   <!-- CONTACT -->
   <div class="section-title">Contact</div>
@@ -196,6 +211,9 @@
     'Screen Recording 2026-05-04 141556.mp4',
     'Screen Recording 2026-06-20 100652.mp4',
     'Screen Recording 2026-06-28 040141.mp4',
+	'Screen Recording 2026-07-06 035004.mp4',
+	'Screen Recording 2026-07-06 034034.mp4',
+	'Roblox-2026-03-24T20_52_38.803Z.mp4'
   ];
 
   const grid = document.getElementById('vgrid');
